@@ -52,33 +52,6 @@ void ofApp::setup() {
 
     }
     
-    numberOfNoteOns = 0;
-//    numberOfKicks = 0;
-//    numberOfSnares = 0;
-    
-//   drums.push_back("snare");
-//   drums.push_back("kick");
-//   drums.push_back("tom");
-    
-//    for (string drum : drums) {
-    
-//    vector<Pigeon> snarePigeons;
-//    for (int i = 0; i < 11; i++) {
-//           snarePigeons.push_back(i);
-//      }
-//  }
-  
-    
-    
-//    for (int i = 0; i < NUM_PIGEONS_PER_DRUM; i++) {
-//        kickPigeons.push_back(Pigeon(i, ofVec3f((i+1)*120, 120, 0)));
-//    }
-//    
-//    for (int i = 0; i < NUM_PIGEONS_PER_DRUM; i++) {
-//        snarePigeons.push_back(Pigeon(i, ofVec3f((i+1)*120, 240, 0)));
-//    }
-    
-    
     
 }
 
@@ -92,14 +65,6 @@ void ofApp::draw() {
 	ofSetColor(150,10,10);
 	
     
-//    for (int i = 0; i < kickPigeons.size(); i++) {
-//        kickPigeons[i].draw();
-//    }
-//    
-//    ofSetColor(10,150,10);
-//    for (int i = 0; i < snarePigeons.size(); i++) {
-//        snarePigeons[i].draw();
-//    }
     
     for (auto &pigeonElement : pigeons) {
         auto pigeonList = pigeonElement.second;
@@ -108,7 +73,7 @@ void ofApp::draw() {
         }
     }
     
-    
+//    this is a new line
 }
 
 //--------------------------------------------------------------
@@ -155,31 +120,6 @@ void ofApp::newMidiMessage(ofxMidiMessage& msg) {
         }
         
         
-        
-        
-//        numberOfNoteOns ++;
-//        
-//        printf("number of midi messages received so far: %d\n", numberOfNoteOns);
-//        
-//        if (msg.pitch == 0) {
-//            if(numberOfHits["kick"] < kickPigeons.size()){
-////            cout << "we see pigeon number " << numberOfKicks << " explode" << endl;
-////                printf("we see kickPigeon number %d explode\n", numberOfKicks);
-//                kickPigeons[numberOfHits["kick"]].explode();
-//                numberOfHits["kick"] ++;
-//                printf("number of kicks received so far: %d\n", numberOfHits["kick"] );
-//            }
-//        }
-//
-//        else if (msg.pitch == 2) {
-//            if(numberOfHits["snare"] < snarePigeons.size()){
-////                printf("we see snarePigeon number %d explode\n", numberOfSnares);
-//                snarePigeons[numberOfHits["snare"]].explode();
-//                numberOfHits["snare"] ++;
-//                printf("number of snares received so far: %d\n", numberOfHits["snare"] );
-//
-//            }
-//        }
     }
 }
 
@@ -192,9 +132,10 @@ void ofApp::keyPressed(int key) {
 			break;
 	}
     
-    if(key == 'r'){
-        numberOfKicks = 0;
-        numberOfSnares = 0;
+    if(key == 'r'){        
+        for (auto &hitElement : numberOfHits) {
+            hitElement.second = 0;
+        }
     }
 }
 

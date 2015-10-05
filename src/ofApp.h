@@ -49,23 +49,10 @@ public:
 	
 	ofxMidiIn midiIn;
 	ofxMidiMessage midiMessage;
-    int numberOfNoteOns;
-    int numberOfKicks;
-    int numberOfSnares;
-    
-//    map<string, vector<Pigeon> > pigeons;
-//    vector<string> drums;
-    
-//    vector<Pigeon> snarePigeons;
-    
-    vector<Pigeon> kickPigeons;
-    vector<Pigeon> snarePigeons;
     
     map<string, int> numberOfHits;
     map<string, vector<Pigeon*> > pigeons;
-    
-//    vector<Pigeon>::iterator pigeonIterator = kickPigeons.begin();
-    
+
     vector<Drum> drums;
 };
 
