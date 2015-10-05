@@ -19,11 +19,6 @@
 struct Drum {
     string name;
     int midiNote;
-    
-    Drum(string n, int note) {
-        name = n;
-        midiNote = note;
-    }
 };
 
 class ofApp : public ofBaseApp, public ofxMidiListener {

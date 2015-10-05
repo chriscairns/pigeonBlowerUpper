@@ -35,9 +35,16 @@ void ofApp::setup() {
 	// print received messages to the console
 	midiIn.setVerbose(true);
     
-    drums.push_back(Drum("kick", 0));
-    drums.push_back(Drum("snare", 1));
-    drums.push_back(Drum("hihat", 2));
+    Drum kickDrum = { .name = "kick", .midiNote = 0 };
+    drums.push_back(kickDrum);
+    
+    Drum snareDrum = { .name = "snare", .midiNote = 1 };
+    drums.push_back(snareDrum);
+    
+    Drum hihatDrum = { .name = "hihat", .midiNote = 2 };
+    drums.push_back(hihatDrum);
+    
+
     
     // add a key for each of the drums to numberOfHits
     
@@ -132,7 +139,7 @@ void ofApp::keyPressed(int key) {
 			break;
 	}
     
-    if(key == 'r'){        
+    if(key == 'r'){
         for (auto &hitElement : numberOfHits) {
             hitElement.second = 0;
         }
