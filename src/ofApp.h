@@ -19,6 +19,8 @@
 struct Drum {
     string name;
     int midiNote;
+    int numberOfPigeons;
+    string modelName;
 };
 
 class ofApp : public ofBaseApp, public ofxMidiListener {

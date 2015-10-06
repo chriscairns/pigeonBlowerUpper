@@ -35,13 +35,13 @@ void ofApp::setup() {
 	// print received messages to the console
 	midiIn.setVerbose(true);
     
-    Drum kickDrum = { .name = "kick", .midiNote = 0 };
+    Drum kickDrum = { .name = "kick", .midiNote = 0, .numberOfPigeons = 3 };
     drums.push_back(kickDrum);
     
-    Drum snareDrum = { .name = "snare", .midiNote = 1 };
+    Drum snareDrum = { .name = "snare", .midiNote = 1, .numberOfPigeons = 2 };
     drums.push_back(snareDrum);
     
-    Drum hihatDrum = { .name = "hihat", .midiNote = 2 };
+    Drum hihatDrum = { .name = "hihat", .midiNote = 2, .numberOfPigeons = 4 };
     drums.push_back(hihatDrum);
     
 
@@ -52,7 +52,7 @@ void ofApp::setup() {
     for (Drum drum : drums) {
         numberOfHits[drum.name] = 0;
         
-        for (int i = 0; i < NUM_PIGEONS_PER_DRUM; i++) {
+        for (int i = 0; i < drum.numberOfPigeons; i++) {
             pigeons[drum.name].push_back(new Pigeon(i, ofVec3f((i+1)*120, (counter+1)*120, 0)));
         }
         counter++;
