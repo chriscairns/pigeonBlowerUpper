@@ -12,3 +12,9 @@ App to simulate blowing up pigeons via MIDI
 |`crash`   |C#2       |25                                               |
 |`ride`  |D2      |26                                               |
 |`splash`  |B1      |23                                               |
+
+
+## Dependencies/addons
+
+- [ofxOBJModel](https://github.com/isthisgood/ofxOBJModel)
+- [ofxPhysicalOBJModel](https://github.com/whg/ofxPhysicalOBJModel)
