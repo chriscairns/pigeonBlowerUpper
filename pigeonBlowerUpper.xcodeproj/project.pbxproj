@@ -44,7 +44,7 @@
 		EE8510B01BC54EDD00779C25 /* ofxOBJFace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510A81BC54EDD00779C25 /* ofxOBJFace.cpp */; };
 		EE8510B11BC54EDD00779C25 /* ofxOBJGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510AA1BC54EDD00779C25 /* ofxOBJGroup.cpp */; };
 		EE8510B21BC54EDD00779C25 /* ofxOBJModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510AC1BC54EDD00779C25 /* ofxOBJModel.cpp */; };
-		EE8510B31BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510AE1BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp */; };
+		EE8510DC1BC55C9F00779C25 /* ofxPhysicalOBJModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510D81BC55C9F00779C25 /* ofxPhysicalOBJModel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,8 +174,9 @@
 		EE8510AB1BC54EDD00779C25 /* ofxOBJGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOBJGroup.h; sourceTree = "<group>"; };
 		EE8510AC1BC54EDD00779C25 /* ofxOBJModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOBJModel.cpp; sourceTree = "<group>"; };
 		EE8510AD1BC54EDD00779C25 /* ofxOBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOBJModel.h; sourceTree = "<group>"; };
-		EE8510AE1BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPhysicalOBJModel.cpp; sourceTree = "<group>"; };
-		EE8510AF1BC54EDD00779C25 /* ofxPhysicalOBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPhysicalOBJModel.h; sourceTree = "<group>"; };
+		EE8510D81BC55C9F00779C25 /* ofxPhysicalOBJModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPhysicalOBJModel.cpp; sourceTree = "<group>"; };
+		EE8510D91BC55C9F00779C25 /* ofxPhysicalOBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPhysicalOBJModel.h; sourceTree = "<group>"; };
+		EE8510E01BC5666300779C25 /* Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		F634AA6CA2E3C60F3B87B59A /* ofxRtMidiIn.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxRtMidiIn.cpp; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiIn.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -379,6 +380,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				EE8510C61BC55C9F00779C25 /* ofxPhysicalOBJModel */,
 				EE8510B41BC54EE400779C25 /* ofxOBJModel */,
 				68FAF5D41BBD5D1F0079AD88 /* ofxAssimpModelLoader */,
 				2413C01760B1811BED0F502D /* ofxMidi */,
@@ -454,6 +456,7 @@
 				2D129AB0F7D46B8DFCEADEDB /* ofApp.h */,
 				681BA8BF1BBABFEA001C1345 /* Pigeon.cpp */,
 				681BA8C01BBABFEA001C1345 /* Pigeon.hpp */,
+				EE8510E01BC5666300779C25 /* Tools.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -476,8 +479,6 @@
 				EE8510AB1BC54EDD00779C25 /* ofxOBJGroup.h */,
 				EE8510AC1BC54EDD00779C25 /* ofxOBJModel.cpp */,
 				EE8510AD1BC54EDD00779C25 /* ofxOBJModel.h */,
-				EE8510AE1BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp */,
-				EE8510AF1BC54EDD00779C25 /* ofxPhysicalOBJModel.h */,
 			);
 			name = src;
 			path = ../../../addons/ofxOBJModel/src;
@@ -489,6 +490,24 @@
 				EE8510A71BC54EDD00779C25 /* src */,
 			);
 			name = ofxOBJModel;
+			sourceTree = "<group>";
+		};
+		EE8510C61BC55C9F00779C25 /* ofxPhysicalOBJModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE8510D71BC55C9F00779C25 /* src */,
+			);
+			name = ofxPhysicalOBJModel;
+			path = ../../../addons/ofxPhysicalOBJModel;
+			sourceTree = "<group>";
+		};
+		EE8510D71BC55C9F00779C25 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				EE8510D81BC55C9F00779C25 /* ofxPhysicalOBJModel.cpp */,
+				EE8510D91BC55C9F00779C25 /* ofxPhysicalOBJModel.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,8 +608,8 @@
 				EE8510B01BC54EDD00779C25 /* ofxOBJFace.cpp in Sources */,
 				3AEFE4FA8AD5C72671AD07F8 /* ofxRtMidiOut.cpp in Sources */,
 				681BA8C11BBABFEA001C1345 /* Pigeon.cpp in Sources */,
+				EE8510DC1BC55C9F00779C25 /* ofxPhysicalOBJModel.cpp in Sources */,
 				1A86B7721CAEBC6F1C572C45 /* ofxBaseMidi.cpp in Sources */,
-				EE8510B31BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp in Sources */,
 				63F9FE1D90234FA6DE6F509E /* ofxMidi.cpp in Sources */,
 				0BFC9C20FD7E3C8D5873AA97 /* ofxMidiIn.cpp in Sources */,
 				C6FE64F74F1EA1D98C8F9847 /* ofxMidiMessage.cpp in Sources */,

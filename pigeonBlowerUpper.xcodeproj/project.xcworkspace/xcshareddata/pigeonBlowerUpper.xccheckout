@@ -16,6 +16,8 @@
 		<string>https://github.com/isthisgood/ofxOBJModel.git</string>
 		<key>90E2F969A762FB62C413A0C44D1F334E6EC3F531</key>
 		<string>https://github.com/whg/ofxMidi.git</string>
+		<key>B2FC6613B1C7A50272B6FB50A36E984C1D9F532D</key>
+		<string>https://github.com/whg/ofxPhysicalOBJModel.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>pigeonBlowerUpper.xcodeproj</string>
@@ -27,6 +29,8 @@
 		<string>../../../addons/ofxOBJModel</string>
 		<key>90E2F969A762FB62C413A0C44D1F334E6EC3F531</key>
 		<string>../../../addons/ofxMidi</string>
+		<key>B2FC6613B1C7A50272B6FB50A36E984C1D9F532D</key>
+		<string>../../../../../addons/ofxPhysicalOBJModel</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/chriscairns/pigeonBlowerUpper.git</string>
@@ -51,6 +55,14 @@
 			<string>679302B7E9EF7F3E577E93E511337352EB3FD9C6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxOBJModel</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B2FC6613B1C7A50272B6FB50A36E984C1D9F532D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxPhysicalOBJModel</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

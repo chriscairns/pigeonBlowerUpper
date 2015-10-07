@@ -53,5 +53,6 @@ public:
     vector<Drum> drums;
     
     ofEasyCam cam;
+    ofImage pigeonTexture;
 };
 
