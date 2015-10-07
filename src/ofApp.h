@@ -51,5 +51,7 @@ public:
     map<string, vector<Pigeon*> > pigeons;
 
     vector<Drum> drums;
+    
+    ofEasyCam cam;
 };
 

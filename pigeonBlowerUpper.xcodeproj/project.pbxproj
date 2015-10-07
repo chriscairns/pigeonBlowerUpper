@@ -15,11 +15,11 @@
 		63D0FD8734D5760B8080C901 /* RtMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABDEF0ACF05BF28F5C74E008 /* RtMidi.cpp */; };
 		63F9FE1D90234FA6DE6F509E /* ofxMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E238CCDE032640E0FEBFAD82 /* ofxMidi.cpp */; };
 		681BA8C11BBABFEA001C1345 /* Pigeon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681BA8BF1BBABFEA001C1345 /* Pigeon.cpp */; };
-		68FAF60B1BBD5D1F0079AD88 /* assimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FAF6001BBD5D1F0079AD88 /* assimp.a */; settings = {ASSET_TAGS = (); }; };
-		68FAF60C1BBD5D1F0079AD88 /* ofxAssimpAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6021BBD5D1F0079AD88 /* ofxAssimpAnimation.cpp */; settings = {ASSET_TAGS = (); }; };
-		68FAF60D1BBD5D1F0079AD88 /* ofxAssimpMeshHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6041BBD5D1F0079AD88 /* ofxAssimpMeshHelper.cpp */; settings = {ASSET_TAGS = (); }; };
-		68FAF60E1BBD5D1F0079AD88 /* ofxAssimpModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6061BBD5D1F0079AD88 /* ofxAssimpModelLoader.cpp */; settings = {ASSET_TAGS = (); }; };
-		68FAF60F1BBD5D1F0079AD88 /* ofxAssimpTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6081BBD5D1F0079AD88 /* ofxAssimpTexture.cpp */; settings = {ASSET_TAGS = (); }; };
+		68FAF60B1BBD5D1F0079AD88 /* assimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FAF6001BBD5D1F0079AD88 /* assimp.a */; };
+		68FAF60C1BBD5D1F0079AD88 /* ofxAssimpAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6021BBD5D1F0079AD88 /* ofxAssimpAnimation.cpp */; };
+		68FAF60D1BBD5D1F0079AD88 /* ofxAssimpMeshHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6041BBD5D1F0079AD88 /* ofxAssimpMeshHelper.cpp */; };
+		68FAF60E1BBD5D1F0079AD88 /* ofxAssimpModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6061BBD5D1F0079AD88 /* ofxAssimpModelLoader.cpp */; };
+		68FAF60F1BBD5D1F0079AD88 /* ofxAssimpTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6081BBD5D1F0079AD88 /* ofxAssimpTexture.cpp */; };
 		83D9F930112E0944444124EE /* ofxMidiOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04F77E5C73A62E2E77C78EC6 /* ofxMidiOut.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		BCC8D420CBA9217E437D2D76 /* ofxRtMidiIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F634AA6CA2E3C60F3B87B59A /* ofxRtMidiIn.cpp */; };
@@ -41,6 +41,10 @@
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		EE8510B01BC54EDD00779C25 /* ofxOBJFace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510A81BC54EDD00779C25 /* ofxOBJFace.cpp */; };
+		EE8510B11BC54EDD00779C25 /* ofxOBJGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510AA1BC54EDD00779C25 /* ofxOBJGroup.cpp */; };
+		EE8510B21BC54EDD00779C25 /* ofxOBJModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510AC1BC54EDD00779C25 /* ofxOBJModel.cpp */; };
+		EE8510B31BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE8510AE1BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +168,14 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		EE8510A81BC54EDD00779C25 /* ofxOBJFace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOBJFace.cpp; sourceTree = "<group>"; };
+		EE8510A91BC54EDD00779C25 /* ofxOBJFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOBJFace.h; sourceTree = "<group>"; };
+		EE8510AA1BC54EDD00779C25 /* ofxOBJGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOBJGroup.cpp; sourceTree = "<group>"; };
+		EE8510AB1BC54EDD00779C25 /* ofxOBJGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOBJGroup.h; sourceTree = "<group>"; };
+		EE8510AC1BC54EDD00779C25 /* ofxOBJModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOBJModel.cpp; sourceTree = "<group>"; };
+		EE8510AD1BC54EDD00779C25 /* ofxOBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOBJModel.h; sourceTree = "<group>"; };
+		EE8510AE1BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPhysicalOBJModel.cpp; sourceTree = "<group>"; };
+		EE8510AF1BC54EDD00779C25 /* ofxPhysicalOBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPhysicalOBJModel.h; sourceTree = "<group>"; };
 		F634AA6CA2E3C60F3B87B59A /* ofxRtMidiIn.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxRtMidiIn.cpp; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiIn.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -367,6 +379,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				EE8510B41BC54EE400779C25 /* ofxOBJModel */,
 				68FAF5D41BBD5D1F0079AD88 /* ofxAssimpModelLoader */,
 				2413C01760B1811BED0F502D /* ofxMidi */,
 			);
@@ -452,6 +465,30 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		EE8510A71BC54EDD00779C25 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				EE8510A81BC54EDD00779C25 /* ofxOBJFace.cpp */,
+				EE8510A91BC54EDD00779C25 /* ofxOBJFace.h */,
+				EE8510AA1BC54EDD00779C25 /* ofxOBJGroup.cpp */,
+				EE8510AB1BC54EDD00779C25 /* ofxOBJGroup.h */,
+				EE8510AC1BC54EDD00779C25 /* ofxOBJModel.cpp */,
+				EE8510AD1BC54EDD00779C25 /* ofxOBJModel.h */,
+				EE8510AE1BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp */,
+				EE8510AF1BC54EDD00779C25 /* ofxPhysicalOBJModel.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxOBJModel/src;
+			sourceTree = "<group>";
+		};
+		EE8510B41BC54EE400779C25 /* ofxOBJModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE8510A71BC54EDD00779C25 /* src */,
+			);
+			name = ofxOBJModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,13 +580,17 @@
 			files = (
 				68FAF60D1BBD5D1F0079AD88 /* ofxAssimpMeshHelper.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				EE8510B11BC54EDD00779C25 /* ofxOBJGroup.cpp in Sources */,
 				68FAF60C1BBD5D1F0079AD88 /* ofxAssimpAnimation.cpp in Sources */,
 				29D734F0DDECC8C5978185D7 /* ofApp.cpp in Sources */,
+				EE8510B21BC54EDD00779C25 /* ofxOBJModel.cpp in Sources */,
 				BCC8D420CBA9217E437D2D76 /* ofxRtMidiIn.cpp in Sources */,
 				68FAF60E1BBD5D1F0079AD88 /* ofxAssimpModelLoader.cpp in Sources */,
+				EE8510B01BC54EDD00779C25 /* ofxOBJFace.cpp in Sources */,
 				3AEFE4FA8AD5C72671AD07F8 /* ofxRtMidiOut.cpp in Sources */,
 				681BA8C11BBABFEA001C1345 /* Pigeon.cpp in Sources */,
 				1A86B7721CAEBC6F1C572C45 /* ofxBaseMidi.cpp in Sources */,
+				EE8510B31BC54EDD00779C25 /* ofxPhysicalOBJModel.cpp in Sources */,
 				63F9FE1D90234FA6DE6F509E /* ofxMidi.cpp in Sources */,
 				0BFC9C20FD7E3C8D5873AA97 /* ofxMidiIn.cpp in Sources */,
 				C6FE64F74F1EA1D98C8F9847 /* ofxMidiMessage.cpp in Sources */,

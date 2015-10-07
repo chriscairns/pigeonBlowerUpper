@@ -45,7 +45,7 @@ void ofApp::setup() {
     drums.push_back(hihatDrum);
     
 
-    
+    ofImage img;
     // add a key for each of the drums to numberOfHits
     
     int counter = 0;
@@ -59,19 +59,28 @@ void ofApp::setup() {
 
     }
     
+    cam.setPosition(124.101639, 431.887573, 924.459777);
     
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
     ofSetWindowTitle( ofToString( ofGetFrameRate(),1 ) );
+    
+    for (auto &pigeonElement : pigeons) {
+        auto pigeonList = pigeonElement.second;
+        for (auto &pigeon : pigeonList) {
+            pigeon->update();
+        }
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
 	ofSetColor(150,10,10);
 	
-    
+    cam.begin();
+
     
     for (auto &pigeonElement : pigeons) {
         auto pigeonList = pigeonElement.second;
@@ -79,6 +88,8 @@ void ofApp::draw() {
             pigeon->draw();
         }
     }
+    
+    cam.end();
     
 //    this is a new line
 }
@@ -142,6 +153,13 @@ void ofApp::keyPressed(int key) {
     if(key == 'r'){
         for (auto &hitElement : numberOfHits) {
             hitElement.second = 0;
+        }
+        
+        for (auto &pigeonElement : pigeons) { // loop through each of the drums with pigeons
+            auto pigeonList = pigeonElement.second;
+            for (auto &pigeon : pigeonList) { // loop through all the pigeons for this drum
+                pigeon->reset();
+            }
         }
     }
 }
