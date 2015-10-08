@@ -15,6 +15,10 @@
 		63D0FD8734D5760B8080C901 /* RtMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABDEF0ACF05BF28F5C74E008 /* RtMidi.cpp */; };
 		63F9FE1D90234FA6DE6F509E /* ofxMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E238CCDE032640E0FEBFAD82 /* ofxMidi.cpp */; };
 		681BA8C11BBABFEA001C1345 /* Pigeon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 681BA8BF1BBABFEA001C1345 /* Pigeon.cpp */; };
+		68507E111BC3DCD80010AA64 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 68507E091BC3DCD80010AA64 /* README.md */; settings = {ASSET_TAGS = (); }; };
+		68507E121BC3DCD80010AA64 /* ofxOBJFace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68507E0B1BC3DCD80010AA64 /* ofxOBJFace.cpp */; settings = {ASSET_TAGS = (); }; };
+		68507E131BC3DCD80010AA64 /* ofxOBJGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68507E0D1BC3DCD80010AA64 /* ofxOBJGroup.cpp */; settings = {ASSET_TAGS = (); }; };
+		68507E141BC3DCD80010AA64 /* ofxOBJModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68507E0F1BC3DCD80010AA64 /* ofxOBJModel.cpp */; settings = {ASSET_TAGS = (); }; };
 		68FAF60B1BBD5D1F0079AD88 /* assimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FAF6001BBD5D1F0079AD88 /* assimp.a */; settings = {ASSET_TAGS = (); }; };
 		68FAF60C1BBD5D1F0079AD88 /* ofxAssimpAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6021BBD5D1F0079AD88 /* ofxAssimpAnimation.cpp */; settings = {ASSET_TAGS = (); }; };
 		68FAF60D1BBD5D1F0079AD88 /* ofxAssimpMeshHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68FAF6041BBD5D1F0079AD88 /* ofxAssimpMeshHelper.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -84,6 +88,13 @@
 		470CF04F1D4D1B38D5AA1797 /* ofxRtMidiOut.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRtMidiOut.h; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiOut.h; sourceTree = SOURCE_ROOT; };
 		681BA8BF1BBABFEA001C1345 /* Pigeon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pigeon.cpp; sourceTree = "<group>"; };
 		681BA8C01BBABFEA001C1345 /* Pigeon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pigeon.hpp; sourceTree = "<group>"; };
+		68507E091BC3DCD80010AA64 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		68507E0B1BC3DCD80010AA64 /* ofxOBJFace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOBJFace.cpp; sourceTree = "<group>"; };
+		68507E0C1BC3DCD80010AA64 /* ofxOBJFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOBJFace.h; sourceTree = "<group>"; };
+		68507E0D1BC3DCD80010AA64 /* ofxOBJGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOBJGroup.cpp; sourceTree = "<group>"; };
+		68507E0E1BC3DCD80010AA64 /* ofxOBJGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOBJGroup.h; sourceTree = "<group>"; };
+		68507E0F1BC3DCD80010AA64 /* ofxOBJModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOBJModel.cpp; sourceTree = "<group>"; };
+		68507E101BC3DCD80010AA64 /* ofxOBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOBJModel.h; sourceTree = "<group>"; };
 		68FAF5D51BBD5D1F0079AD88 /* addon_config.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = addon_config.mk; sourceTree = "<group>"; };
 		68FAF5D91BBD5D1F0079AD88 /* aiAnim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aiAnim.h; sourceTree = "<group>"; };
 		68FAF5DA1BBD5D1F0079AD88 /* aiAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aiAssert.h; sourceTree = "<group>"; };
@@ -211,6 +222,29 @@
 				945CEFADFB0DF400A92A507C /* rtmidi */,
 			);
 			name = libs;
+			sourceTree = "<group>";
+		};
+		68507E081BC3DCD80010AA64 /* ofxOBJModel */ = {
+			isa = PBXGroup;
+			children = (
+				68507E091BC3DCD80010AA64 /* README.md */,
+				68507E0A1BC3DCD80010AA64 /* src */,
+			);
+			name = ofxOBJModel;
+			path = ../../../addons/ofxOBJModel;
+			sourceTree = "<group>";
+		};
+		68507E0A1BC3DCD80010AA64 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				68507E0B1BC3DCD80010AA64 /* ofxOBJFace.cpp */,
+				68507E0C1BC3DCD80010AA64 /* ofxOBJFace.h */,
+				68507E0D1BC3DCD80010AA64 /* ofxOBJGroup.cpp */,
+				68507E0E1BC3DCD80010AA64 /* ofxOBJGroup.h */,
+				68507E0F1BC3DCD80010AA64 /* ofxOBJModel.cpp */,
+				68507E101BC3DCD80010AA64 /* ofxOBJModel.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		68FAF5D41BBD5D1F0079AD88 /* ofxAssimpModelLoader */ = {
@@ -367,6 +401,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				68507E081BC3DCD80010AA64 /* ofxOBJModel */,
 				68FAF5D41BBD5D1F0079AD88 /* ofxAssimpModelLoader */,
 				2413C01760B1811BED0F502D /* ofxMidi */,
 			);
@@ -547,6 +582,9 @@
 				29D734F0DDECC8C5978185D7 /* ofApp.cpp in Sources */,
 				BCC8D420CBA9217E437D2D76 /* ofxRtMidiIn.cpp in Sources */,
 				68FAF60E1BBD5D1F0079AD88 /* ofxAssimpModelLoader.cpp in Sources */,
+				68507E121BC3DCD80010AA64 /* ofxOBJFace.cpp in Sources */,
+				68507E111BC3DCD80010AA64 /* README.md in Sources */,
+				68507E141BC3DCD80010AA64 /* ofxOBJModel.cpp in Sources */,
 				3AEFE4FA8AD5C72671AD07F8 /* ofxRtMidiOut.cpp in Sources */,
 				681BA8C11BBABFEA001C1345 /* Pigeon.cpp in Sources */,
 				1A86B7721CAEBC6F1C572C45 /* ofxBaseMidi.cpp in Sources */,
@@ -554,6 +592,7 @@
 				0BFC9C20FD7E3C8D5873AA97 /* ofxMidiIn.cpp in Sources */,
 				C6FE64F74F1EA1D98C8F9847 /* ofxMidiMessage.cpp in Sources */,
 				83D9F930112E0944444124EE /* ofxMidiOut.cpp in Sources */,
+				68507E131BC3DCD80010AA64 /* ofxOBJGroup.cpp in Sources */,
 				63D0FD8734D5760B8080C901 /* RtMidi.cpp in Sources */,
 				68FAF60F1BBD5D1F0079AD88 /* ofxAssimpTexture.cpp in Sources */,
 			);

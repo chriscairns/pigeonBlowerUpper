@@ -14,6 +14,8 @@
 #include "ofxMidi.h"
 #include "Pigeon.hpp"
 
+#include "ofxOBJModel.h"
+
 #define NUM_PIGEONS_PER_DRUM 30
 
 struct Drum {
@@ -51,5 +53,8 @@ public:
     map<string, vector<Pigeon*> > pigeons;
 
     vector<Drum> drums;
+    
+    ofxOBJModel model;
+    ofEasyCam cam;
 };
 

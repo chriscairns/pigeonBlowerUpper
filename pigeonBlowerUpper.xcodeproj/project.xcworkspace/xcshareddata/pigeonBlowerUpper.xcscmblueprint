@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "64C39AE812052AEA4CFA1BD3CE92D71AE0E17157",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "679302B7E9EF7F3E577E93E511337352EB3FD9C6" : 0,
+    "64C39AE812052AEA4CFA1BD3CE92D71AE0E17157" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DBA76127-6546-4E6C-ABF3-9344B69591A9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "679302B7E9EF7F3E577E93E511337352EB3FD9C6" : "..\/..\/addons\/ofxOBJModel",
+    "64C39AE812052AEA4CFA1BD3CE92D71AE0E17157" : "pigeonBlowerUpper\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "pigeonBlowerUpper",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "pigeonBlowerUpper.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/chriscairns\/pigeonBlowerUpper.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "64C39AE812052AEA4CFA1BD3CE92D71AE0E17157"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/isthisgood\/ofxOBJModel.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "679302B7E9EF7F3E577E93E511337352EB3FD9C6"
+    }
+  ]
+}

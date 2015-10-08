@@ -46,6 +46,7 @@ void ofApp::setup() {
     
 
     
+    
     // add a key for each of the drums to numberOfHits
     
     int counter = 0;
@@ -59,7 +60,18 @@ void ofApp::setup() {
 
     }
     
+    float start = ofGetElapsedTimef();
+    model.load("/Users/CCTV_MacPro/Dropbox/dropboxProjects/explodingPigeonDrums/C4D/C4Dprojects/objExports/explodingPigeonDrumsLayoutCube.obj");
+    cout << "took " << (ofGetElapsedTimef() - start) << " secs to load" << endl;
     
+//    cam.setPosition(0, 0, -50000);
+    
+    model.scale(0.1);
+    
+    auto names = model.getGroupNames();
+    for (auto name : names) {
+        cout << name << endl;
+    }
 }
 
 //--------------------------------------------------------------
@@ -71,14 +83,21 @@ void ofApp::update() {
 void ofApp::draw() {
 	ofSetColor(150,10,10);
 	
+
+    cam.begin();
     
+//    model.draw(false);
     
-    for (auto &pigeonElement : pigeons) {
-        auto pigeonList = pigeonElement.second;
-        for (auto &pigeon : pigeonList) {
-            pigeon->draw();
-        }
-    }
+    model.getVboMesh()->draw();
+    
+    cam.end();
+    
+//    for (auto &pigeonElement : pigeons) {
+//        auto pigeonList = pigeonElement.second;
+//        for (auto &pigeon : pigeonList) {
+//            pigeon->draw();
+//        }
+//    }
     
 //    this is a new line
 }
