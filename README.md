@@ -13,6 +13,7 @@ App to simulate blowing up pigeons via MIDI
 |`ride`  |D2      |26                                               |
 |`splash`  |B1      |23                                               |
 
+Model naming convention - kick_pigeon_1, kick_pigeon_2 etc.
 
 ## Dependencies/addons
 
