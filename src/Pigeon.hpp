@@ -12,29 +12,36 @@
 #include "ofxAssimpModelLoader.h"
 #include "ofVboMesh.h"
 
-class Pigeon {
-    
+#include "ofxPhysicalOBJModel.h"
+
+class Pigeon : public ofxPhysicalOBJModel {
 public:
+    Pigeon(int n, ofVec3f p);
+
     void setup();
+    void reset();
+    void update();
+    void explode();
+    void draw();
+    
     int number;
     ofVec3f pos;
     
     float size;
-    bool exploded;
+    bool exploding;
     bool maxSizeReached;
     
-    Pigeon(int n, ofVec3f p);
-    
-    void explode();
-    
-    void draw();
-    
-    ofxAssimpModelLoader model;
-    
-    //    bool bAnimate;
-    //    bool bAnimateMouse;
-    //    float animationPosition;
+    string objName;
     
     ofMesh mesh;
     ofLight	light;
+    
+    
+protected:
+    vector<ofVec3f> paintPoints;
+    ofVboMesh paintMesh;
+    int paintAlpha;
+    
+  
+    
 };

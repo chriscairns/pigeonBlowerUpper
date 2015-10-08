@@ -9,31 +9,25 @@
  *
  */
 #include "ofApp.h"
+#include "Tools.h"
 
 //--------------------------------------------------------------
 void ofApp::setup() {
+
+
 	ofSetVerticalSync(true);
 	ofBackground(255, 255, 255);
-	//ofSetLogLevel(OF_LOG_VERBOSE);
-	
-	// print input ports to console
 	midiIn.listPorts(); // via instance
-	//ofxMidiIn::listPorts(); // via static as well
-	
-	// open port by number (you may need to change this)
 	midiIn.openPort(1);
-	//midiIn.openPort("IAC Pure Data In");	// by name
-	//midiIn.openVirtualPort("ofxMidiIn Input"); // open a virtual port
-	
-	// don't ignore sysex, timing, & active sense messages,
-	// these are ignored by default
 	midiIn.ignoreTypes(false, false, false);
-	
-	// add ofApp as a listener
 	midiIn.addListener(this);
-	
-	// print received messages to the console
 	midiIn.setVerbose(true);
+
+    map<string, ofVec3f> poses = positionsFromOBJ("JustPigeons.obj");
+    for (auto pair : poses) {
+        pigeons["kick"].push_back(new Pigeon(0, pair.second));
+    }
+    
     
     Drum kickDrum = { .name = "kick", .midiNote = 0, .numberOfPigeons = 3 };
     drums.push_back(kickDrum);
@@ -44,60 +38,58 @@ void ofApp::setup() {
     Drum hihatDrum = { .name = "hihat", .midiNote = 2, .numberOfPigeons = 4 };
     drums.push_back(hihatDrum);
     
+    
+    
+//    int counter = 0;
+//    for (Drum drum : drums) {
+//        numberOfHits[drum.name] = 0;
+//        
+//        for (int i = 0; i < drum.numberOfPigeons; i++) {
+//            pigeons[drum.name].push_back(new Pigeon(i, ofVec3f((i+1)*120, (counter+1)*120, 0)));
+//        }
+//        counter++;
+//
+//    }
+    
+    cam.setPosition(124.101639, 431.887573, 924.459777);
+    cam.setFarClip(10000);
+    
+    pigeonTexture.loadImage("M_008_Vray_mat1.jpg");
+    
 
     
-    
-    // add a key for each of the drums to numberOfHits
-    
-    int counter = 0;
-    for (Drum drum : drums) {
-        numberOfHits[drum.name] = 0;
-        
-        for (int i = 0; i < drum.numberOfPigeons; i++) {
-            pigeons[drum.name].push_back(new Pigeon(i, ofVec3f((i+1)*120, (counter+1)*120, 0)));
-        }
-        counter++;
-
-    }
-    
-    float start = ofGetElapsedTimef();
-    model.load("/Users/CCTV_MacPro/Dropbox/dropboxProjects/explodingPigeonDrums/C4D/C4Dprojects/objExports/explodingPigeonDrumsLayoutCube.obj");
-    cout << "took " << (ofGetElapsedTimef() - start) << " secs to load" << endl;
-    
-//    cam.setPosition(0, 0, -50000);
-    
-    model.scale(0.1);
-    
-    auto names = model.getGroupNames();
-    for (auto name : names) {
-        cout << name << endl;
-    }
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
     ofSetWindowTitle( ofToString( ofGetFrameRate(),1 ) );
+    
+    for (auto &pigeonElement : pigeons) {
+        auto pigeonList = pigeonElement.second;
+        for (auto &pigeon : pigeonList) {
+            pigeon->update();
+        }
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
 	ofSetColor(150,10,10);
 	
-
     cam.begin();
+
+    pigeonTexture.bind();
     
-//    model.draw(false);
+    for (auto &pigeonElement : pigeons) {
+        auto pigeonList = pigeonElement.second;
+        for (auto &pigeon : pigeonList) {
+            pigeon->draw();
+        }
+    }
     
-    model.getVboMesh()->draw();
+    pigeonTexture.unbind();
     
     cam.end();
-    
-//    for (auto &pigeonElement : pigeons) {
-//        auto pigeonList = pigeonElement.second;
-//        for (auto &pigeon : pigeonList) {
-//            pigeon->draw();
-//        }
-//    }
     
 //    this is a new line
 }
@@ -161,6 +153,13 @@ void ofApp::keyPressed(int key) {
     if(key == 'r'){
         for (auto &hitElement : numberOfHits) {
             hitElement.second = 0;
+        }
+        
+        for (auto &pigeonElement : pigeons) { // loop through each of the drums with pigeons
+            auto pigeonList = pigeonElement.second;
+            for (auto &pigeon : pigeonList) { // loop through all the pigeons for this drum
+                pigeon->reset();
+            }
         }
     }
 }

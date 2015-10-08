@@ -14,8 +14,6 @@
 #include "ofxMidi.h"
 #include "Pigeon.hpp"
 
-#include "ofxOBJModel.h"
-
 #define NUM_PIGEONS_PER_DRUM 30
 
 struct Drum {
@@ -54,7 +52,7 @@ public:
 
     vector<Drum> drums;
     
-    ofxOBJModel model;
     ofEasyCam cam;
+    ofImage pigeonTexture;
 };
 
