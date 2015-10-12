@@ -9,7 +9,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxAssimpModelLoader.h"
 #include "ofVboMesh.h"
 
 #include "ofxPhysicalOBJModel.h"

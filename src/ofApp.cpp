@@ -78,7 +78,7 @@ void ofApp::draw() {
 	
     cam.begin();
 
-    pigeonTexture.bind();
+    //pigeonTexture.bind();
     
     for (auto &pigeonElement : pigeons) {
         auto pigeonList = pigeonElement.second;
@@ -87,7 +87,7 @@ void ofApp::draw() {
         }
     }
     
-    pigeonTexture.unbind();
+//pigeonTexture.unbind();
     
     cam.end();
     
