@@ -54,6 +54,8 @@ void ofApp::setup() {
     cam.setPosition(124.101639, 431.887573, 924.459777);
     cam.setFarClip(10000);
     
+    ofEnableNormalizedTexCoords();
+
     pigeonTexture.loadImage("M_008_Vray_mat1.jpg");
     
 
@@ -74,7 +76,7 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-	ofSetColor(150,10,10);
+	ofSetColor(255);
 	
     cam.begin();
 
