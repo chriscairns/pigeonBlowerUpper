@@ -8,6 +8,7 @@
 
 #include "Pigeon.hpp"
 
+#include "ModelCache.h"
 
 //void Pigeon::setup(){
 //
@@ -30,14 +31,14 @@ Pigeon::Pigeon(int n, ofVec3f p) {
 
 void Pigeon::explode() {
     exploding = true;
-    explodeMesh();
+    model.explodeMesh();
 }
 
 void Pigeon::draw() {
     
     ofPushMatrix();
     ofTranslate(pos);
-    getVboMesh()->draw();
+    model.getVboMesh()->draw();
     ofPopMatrix();
     
 }
@@ -46,14 +47,34 @@ void Pigeon::draw() {
 
 void Pigeon::reset() {
     
-    ofxPhysicalOBJModel::load(objName);
-
-
+//    ofxPhysicalOBJModel::load(objName);
+    
+    model = ofxPhysicalOBJModel(*ModelCache::getModel(objName));
+    
+//    auto m = ModelCache::getModel(objName);
+//    
+//    model.clear();
+//    for (auto group : m->groups) {
+//        model.addGroup(group);
+//    }
+//
+//    
+//    model.vertices.resize(m->vertices.size());
+//    copy(m->vertices.begin(), m->vertices.end(), model.vertices.begin());
+//    
+//    model.normals.resize(m->normals.size());
+//    copy(m->normals.begin(), m->normals.end(), model.normals.begin());
+//    
+//    model.texCoords.resize(m->texCoords.size());
+//    copy(m->texCoords.begin(), m->texCoords.end(), model.texCoords.begin());
+    
+    
+    
     int d = 3;
     paintPoints.clear();
     for (int i = 0; i < 50; i++) {
         ofVec3f v(ofRandom(-d, d), ofRandom(-d, d), ofRandom(-d, d));
-        v+= modelCenter;
+        v+= model.modelCenter;
         paintPoints.push_back(v);
     }
     paintAlpha = 255;
@@ -64,18 +85,18 @@ void Pigeon::update() {
     
     if (exploding) {
     
-        ofxPhysicalOBJModel::update();
+        model.update();
         
 
         for (auto &point : paintPoints) {
-            point+= (point - modelCenter).getNormalized() * 0.5;
+            point+= (point - model.modelCenter).getNormalized() * 0.5;
         }
         
         paintMesh.clear();
         paintMesh.addVertices(paintPoints);
         if (paintAlpha > 0) paintAlpha-= 5;
         
-        if (!inMotion()) {
+        if (!model.inMotion()) {
             exploding = false;
             cout << "exploding = false\n";
         }

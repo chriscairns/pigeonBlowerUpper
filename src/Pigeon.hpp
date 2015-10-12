@@ -14,7 +14,7 @@
 
 #include "ofxPhysicalOBJModel.h"
 
-class Pigeon : public ofxPhysicalOBJModel {
+class Pigeon {
 public:
     Pigeon(int n, ofVec3f p);
 
@@ -36,6 +36,7 @@ public:
     ofMesh mesh;
     ofLight	light;
     
+    ofxPhysicalOBJModel model;
     
 protected:
     vector<ofVec3f> paintPoints;
